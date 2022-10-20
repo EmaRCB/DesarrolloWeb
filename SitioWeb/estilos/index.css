@@ -53,6 +53,9 @@ grid-template-rows: 50% auto;
 #musica{
     background-color: var(--music_red);
 }
+#musica :hover{
+    background-color: rebeccapurple;
+}
 #pintura{
     background-color: var(--paint_green);
 }
