@@ -45,16 +45,14 @@ grid-template-rows: 50% auto;
     padding: 10px;
     text-align: center;
     align-self: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     line-height: 75px;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--white);
 }
 #musica{
     background-color: var(--music_red);
-}
-#musica :hover{
-    background-color: rebeccapurple;
 }
 #pintura{
     background-color: var(--paint_green);
@@ -70,4 +68,21 @@ grid-template-rows: 50% auto;
 }
 #eventos-proximos{
     background-color: var(--events_purple);
+}
+.icon{
+    height: 35px;
+    width: 35px;
+    margin: 10px 25px;
+}
+.banner_text{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--white);
+    margin-left: 15px;
+}
+.banner_text a:link, .banner_text a:visited{
+    font-size: 50px;
+}
+.banner_text a:hover{
+    font-size: 50px;
 }
