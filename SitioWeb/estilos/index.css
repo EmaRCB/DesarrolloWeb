@@ -76,7 +76,8 @@ grid-template-rows: 50% auto;
 }
 .banner_text{
     font-size: 25px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
     color: var(--white);
     margin-left: 15px;
 }
