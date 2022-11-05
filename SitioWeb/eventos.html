@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos/comun.css">
+    <link rel="stylesheet" href="./estilos/eventos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="plantilla.js"></script>
+    <script>
+        
+        window.onload = function(){
+		
+            var f1 = document.getElementById("fecha1");
+            var n1 = document.getElementById("nom1");
+            var u1 = document.getElementById("ub1");
+
+            f1.textContent += "fecha1";
+            n1.textContent += "nom1";
+            u1.textContent += "ub1";
+
+        }
+    </script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="../Recursos/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="item2">
+                <div id="musica" onmouseover="changeColor('var(--music_red)')">
+                    <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a></div>
+                <div id="pintura" onmouseover="changeColor('var(--paint_green)')">
+                    <a href="pintura.html" class="banner_text"><strong>PINTURA</strong></a></div>
+                <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')">
+                    <a href="artesanias.html" class="banner_text"><strong>ARTESAN&#205;AS</strong></a></div>
+                <div id="baile" onmouseover="changeColor('var(--dance_blue)')">
+                    <a href="baile.html" class="banner_text"><strong>BAILE</strong></a></div>
+                <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')">
+                    <a href="anunciate.html" class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
+                <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')">
+                    <a href="eventos.html" class="banner_text"><strong>EVENTOS</strong></a></div>
+        </div>
+        <div class="item3">
+            <div id="bar"></div>
+        </div>
+        <div class="item4"> 
+            <div class="gmaps_box">
+                <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6738.820327385671!2d-89.6159389359657!3d20.967330267817278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5671616868fa75%3A0xfe685b8e8345c314!2sPalacio%20de%20la%20M%C3%BAsica!5e0!3m2!1ses-419!2smx!4v1667685397881!5m2!1ses-419!2smx"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p id="eventos_title">Eventos cerca de Mérida</p>
+            <div class="calendar_box">
+                <div class="calendar_grid">
+                    <div class="calendar_id"><p id="fecha1"></p><p id="nom1"></p><p id="ub1"></p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                    <div class="calendar_id"><p>fecha</p><p>nombre</p><p>ubicacion</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="item5">
+            <p id="footer_sm">REDES SOCIALES PROXIMAMENTE</p>
+        </div>
+    </div>
+</body>
+</html>
