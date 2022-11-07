@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilos/comun.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
@@ -26,10 +27,20 @@
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
+      display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+      'header'
+      'menu'
+      'selector'
+      'main'
+      'footer';
+    grid-template-rows: 7% 8% 2% auto 5%;
     }
     .login {
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       display: grid;
       place-items: center;
     }
@@ -92,6 +103,9 @@
       margin-top: 14px;
       margin-bottom: 30px;
     }
+    h1{
+      justify-self: center;
+    }
     @media (max-width: 640px) {
       .form-container {
         height: 100%;
@@ -119,21 +133,39 @@
         font-size: var(--xlg);
       }
     }
-    img{
-      width: 100%;
-    }
+    
   </style>
 </head>
 <body>
+  <div class="item1">
+    <img src="../Recursos/logo.png" alt="logo" class="logo">
+</div>
+<div class="item2">
+        <div id="musica" onmouseover="changeColor('var(--music_red)')">
+            <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a></div>
+        <div id="pintura" onmouseover="changeColor('var(--paint_green)')">
+            <a href="pintura.html" class="banner_text"><strong>PINTURA</strong></a></div>
+        <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')">
+            <a href="artesanias.html" class="banner_text"><strong>ARTESAN&#205;AS</strong></a></div>
+        <div id="baile" onmouseover="changeColor('var(--dance_blue)')">
+            <a href="baile.html" class="banner_text"><strong>BAILE</strong></a></div>
+        <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')">
+            <a href="anunciate.html" class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
+        <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')">
+            <a href="eventos.html" class="banner_text"><strong>EVENTOS</strong></a></div>
+</div>
+<div class="item3">
+    <div id="bar"></div>
+</div>
   
   <div class="login">
    
     <div class="form-container">
       <div>
-        <img src="../Recursos/logo.png" alt="">
+        
       </div>
      
-      <h1 class="title">Registro de artistas</h1>
+      <h1 class="title">REGISTRATE</h1>
 
       <form action="/" class="form">
         <div>
@@ -150,6 +182,9 @@
         <input type="submit" value="Create" class="primary-button login-button">
       </form>
     </div>
+  </div>
+  <div>
+    
   </div>
 </body>
 </html>
