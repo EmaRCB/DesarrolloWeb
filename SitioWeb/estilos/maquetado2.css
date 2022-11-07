@@ -1,0 +1,356 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 350px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1350px;
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    height: 300px;
+    position: absolute;
+    width: 5%;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 80s linear infinite;
+    display: flex;
+    width: calc(450px * 12);
+}
+
+.slider .slide {
+    width: 450px;
+    height: 300px;
+}
+
+.slide img {
+    width: 450px;
+    height: 300px;
+}
+
+
+.slider2 {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 90px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1350px;
+}
+
+.slider2::before,
+.slider2::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 90px;
+    position: absolute;
+    width: 5%;
+    z-index: 1;
+}
+
+.slider2::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider2::before {
+    left: 0;
+    top: 0;
+}
+
+.slider2 .slide2-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(500px * 12);
+}
+
+.slider2 .slide2 {
+    height: 90px;
+    width: 450px;
+}
+.slider2 .slide2 {
+
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
+    color: rgb(66, 66, 66);
+    margin: 0%;
+
+}
+
+
+
+
+.slider3 {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 90px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1350px;
+}
+
+.slider3::before,
+.slider3::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 90px;
+    position: absolute;
+    width: 5%;
+    z-index: 2;
+}
+
+.slider3::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider3::before {
+    left: 0;
+    top: 0;
+}
+
+.slider3 .slide3-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(450px * 12);
+}
+
+.slider3 .slide3 {
+    height: 90px;
+    width: 450px;
+}
+
+.slider3 .slide3 {
+
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
+    color: rgb(66, 66, 66);
+    margin: 0%;
+
+}
+
+
+
+.grid-item {
+    background-color: white;
+
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+
+
+}
+
+.imagenesFijas {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    height: 250px;
+    width: 100%;
+    margin: auto;
+}
+
+.grid-item img {
+    height: 200px;
+    width: 100%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+    .slider {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        height: 250px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 500px;
+    }
+
+    .slider::before,
+    .slider::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 200px;
+        position: absolute;
+        width: 5%;
+        z-index: 2;
+    }
+
+    .slider .slide-track {
+        animation: scroll 80s linear infinite;
+        display: flex;
+        width: calc(300px * 12);
+    }
+
+    .slider .slide {
+        width: 300px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 300px;
+        height: 200px;
+    }
+
+
+    .slider2 {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        height: 70px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 500px;
+    }
+
+    .slider2::before,
+    .slider2::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 70px;
+        position: absolute;
+        width: 5%;
+        z-index: 1;
+    }
+
+    .slider2 .slide2-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(500px * 12);
+    }
+
+    .slider2 .slide2 {
+        height: 70px;
+        width: 500px;
+    }
+
+    .slider2 .slide2{
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Signika', sans-serif;
+        font-weight: 500;
+        color: rgb(66, 66, 66);
+        margin: 0%;
+
+    }
+
+
+
+    .slider3 {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        height: 70px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 500px;
+    }
+
+    .slider3::before,
+    .slider3::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 70px;
+        position: absolute;
+        width: 5%;
+        z-index: 2;
+    }
+
+    .slider3 .slide3-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(450px * 12);
+    }
+
+    .slider3 .slide3 .slider3 .slide3 {
+        height: 70px;
+        width: 450px;
+    }
+
+    .slider3 .slide3{
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Signika', sans-serif;
+        font-weight: 500;
+        color: rgb(66, 66, 66);
+        margin: 0%;
+
+    }
+
+
+    .grid-item {
+        background-color: white;
+
+        font-size: 30px;
+        text-align: center;
+        padding: 20px;
+
+
+    }
+
+    .imagenesFijas {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: white;
+        height: 100px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .grid-item img {
+        height: 70px;
+        width: 100%;
+    }
+
+
+}
