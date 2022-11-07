@@ -65,10 +65,10 @@ tipoSelect.addEventListener("change", event => {
     switch(elementSelected){
         case '1':
             var topbar = document.getElementById("header");
-            topbar.style.background = 'linear-gradient(to top, var(--strong-red), var(--input-red))';
+            topbar.style.background = 'var(--strong-red)';
 
             var leftContainer = document.getElementById("left-section");
-            leftContainer.style.backgroundColor = 'var(--strong-red)';
+            leftContainer.style.background = 'linear-gradient(to top, var(--strong-red), var(--input-red))';
 
             var musicProy = document.getElementById("musicProyect");
             musicProy.style.backgroundColor = 'var(--soft-red)';
@@ -102,10 +102,10 @@ tipoSelect.addEventListener("change", event => {
         break;
         case '2':
             var topbar = document.getElementById("header");
-            topbar.style.background = 'linear-gradient(to top, var(--paint_green), var(--input_green))';
+            topbar.style.background = 'var(--paint_green)';
 
             var leftContainer = document.getElementById("left-section");
-            leftContainer.style.backgroundColor = 'var(--paint_green)';
+            leftContainer.style.background = 'linear-gradient(to top, var(--paint_green), var(--input_green))';
 
             var select = document.getElementById("categories");
             select.style.backgroundColor = 'var(--soft_green)';
@@ -132,10 +132,10 @@ tipoSelect.addEventListener("change", event => {
         break;
         case '3':
             var topbar = document.getElementById("header");
-            topbar.style.background = 'linear-gradient(to top, var(--crafts_pink), var(--input_pink))';
+            topbar.style.background = 'var(--crafts_pink)';
 
             var leftContainer = document.getElementById("left-section");
-            leftContainer.style.backgroundColor = 'var(--crafts_pink)';
+            leftContainer.style.background = 'linear-gradient(to top, var(--crafts_pink), var(--input_pink))';
 
             var secondAppearance = document.getElementsByClassName("second-appearance-4");
             for (var i=0; i<secondAppearance.length; i++) secondAppearance[i].style.display = 'none';
@@ -162,10 +162,10 @@ tipoSelect.addEventListener("change", event => {
         break;
         case '4':
             var topbar = document.getElementById("header");
-            topbar.style.background = 'linear-gradient(to top, var(--dance_blue), var(--input_blue))';
+            topbar.style.background = 'var(--dance_blue)';
 
             var leftContainer = document.getElementById("left-section");
-            leftContainer.style.backgroundColor = 'var(--dance_blue)';
+            leftContainer.style.background = 'linear-gradient(to top, var(--dance_blue), var(--input_blue))';
 
             var select = document.getElementById("categories");
             select.style.backgroundColor = 'var(--soft_blue)';
