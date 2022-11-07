@@ -107,13 +107,13 @@ grid-template-rows: 40% auto;
 .artist-container{
     height: fit-content;
 }
-.img-destacada-container{
+.cont-destacada-container{
     height: 300px;
     width: 500px;
     border-radius: 50px 50px 0px 0px;
     overflow: hidden;
 }
-.img-destacada{
+.cont-destacada{
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -133,3 +133,37 @@ grid-template-rows: 40% auto;
 .banner_text a:hover{
     font-size: 50px;
 }
+
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        display: grid;
+        height: 100%;
+        grid-template-areas:
+            'main'
+            'menu'
+            'footer';
+        grid-template-columns: auto;
+        grid-template-rows: 15% auto auto;
+        }
+    .buttons > div {
+            justify-content: center;
+            height: 30px;
+        }
+    .icon{
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    .banner_text{
+        font-size: 25px;
+    }
+    .slogan{
+            visibility: hidden;
+            height: 0px !important;
+        }
+    .empty-space{
+        height: 0px !important;
+        background-color: var(--white) !important;
+    }
+  }
