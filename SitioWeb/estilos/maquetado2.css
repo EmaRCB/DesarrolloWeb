@@ -340,16 +340,20 @@
 
     .imagenesFijas {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto;
         background-color: white;
-        height: 100px;
+        height: 150px;
         width: 100%;
         margin: auto;
     }
 
     .grid-item img {
-        height: 70px;
+        height: 150px;
         width: 100%;
+    }
+
+    #visibility{
+        visibility:hidden;
     }
 
 
