@@ -1,0 +1,109 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --strong-orange: #FFA30C;
+    --soft-orange: #FFC76A;
+    --extrasoft-orange : #FFE6BE;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xlg: 25px;
+  }
+  
+  .login {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .form-container {
+    
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    padding: 20px;
+   
+    background-color: var(--soft-orange);
+    border-radius: 50px 0px;
+  }
+  
+  .title {
+    font-size: var(--lg);
+    margin-bottom: 36px;
+    text-align: start;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .label {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .input {
+    background-color: var(--extrasoft-orange);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 12px;
+  }
+  .input-name,
+  .input-email,
+  .input-password {
+    margin-bottom: 22px;
+  }
+  .primary-button {
+    background-color: var(--strong-orange);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+  }
+  .login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+  }
+  h1{
+    justify-self: center;
+  }
+  @media (max-width: 640px) {
+    .form-container {
+      height: 100%;
+      width: 100%; 
+      border-radius: 0px 0px;
+      padding: 10px;
+    
+    }
+    .form {
+      height: 100%;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .primary-button{
+      width: 80%;
+      /* align-items: center; */
+    }
+    img{
+      visibility: hidden;
+    }
+    .title{
+      text-align: center;
+      font-size: var(--xlg);
+    }
+  }

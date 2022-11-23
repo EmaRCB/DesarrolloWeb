@@ -58,6 +58,7 @@ grid-template-rows: 40% auto;
     align-items: center;
     line-height: 75px;
 }
+
 #musica{
     background-color: var(--music_red);
 }
