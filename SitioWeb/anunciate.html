@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./estilos/comun.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="plantilla.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <title>Anunciate</title>
+  <title>Iniciar sesión</title>
   <style>
     :root {
       --white: #FFFFFF;
@@ -136,6 +137,20 @@
     }
     
   </style>
+  <script>
+	
+	
+	function ocultarPanelEstado(panelEstado) {
+		document.getElementById("estado").style.visibility = "hidden";
+	}
+		
+	window.onload = function () {
+	
+	
+	
+	}
+	
+	</script>
 </head>
 <body>
   <div class="item1">
@@ -166,21 +181,19 @@
         
       </div>
      
-      <h1 class="title">REGISTRATE</h1>
+      <h1 class="title">INICIAR SESIÓN</h1>
 
-      <form action="/" class="form">
+      <form action="validar.php" method="get" name="forma" class="form">
         <div>
-          <label for="name" class="label">Nombre artístico</label>
-          <input type="text" id="name" placeholder="Alexandro" class="input input-name">
-
-          <label for="email" class="label">Correo electrónico</label> 
-          <input type="text" id="email" placeholder="artista@ejemplo.com" class="input input-email">
+          <label for="name" class="label">Nombre usuario</label>
+          <input type="text" placeholder="nombre" name="usuario" size="20" class="input input-name">
 
           <label for="password" class="label">Contraseña</label>
-          <input type="password" id="password" placeholder="*********" class="input input-password">
+          <input type="password" placeholder="********" name="contrasena" size="20" class="input input-name">
         </div>
 
-        <a href="registro_arte.html "><input type="button"  value="Crear" class="primary-button login-button"></a>
+        <!--<a href="registro_arte.html "></a>-->
+          <input type="submit"  name="boton" value="Crear" class="primary-button login-button">
         
       </form>
     </div>
