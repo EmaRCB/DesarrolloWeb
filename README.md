@@ -17,7 +17,7 @@ Cosas pendientes:
 | X | Uso de vistas (snapshot), procedimientos almacenados (store procedure) y disparadores (trigger) (2 pts.) |
 | X | Manejo de cookies y local storage (2 pto.) |
 | X | Subir y descargar archivos (2 pts.) |
-| X | Estructura y claridad en el código (2 pts.) |
+| SI | Estructura y claridad en el código (2 pts.) |
 | X | Usar AJAX + JSON con un servicio Web (2 pts.) |
 | X | Uso de javascript para validación y generación dinámica de contenido (4 pts.) |
 | SI | Diseño de interfaz con media-query-print (4 pts.) |
