@@ -72,7 +72,7 @@
           <!--<a href="registro_arte.html "></a>-->
             <input type="submit"  name="boton" value="Iniciar sesión" class="primary-button login-button">
             
-            <a href="registrate.html"><input type="button" name="boton" value="Registrar" class="primary-button login-button"></a>
+            <a href="registrate.php"><input type="button" name="boton" value="Registrar" class="primary-button login-button"></a>
           
         </form>
       </div>
