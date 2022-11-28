@@ -27,7 +27,7 @@ mysqli_close($conexion);
 
 if (mysqli_num_rows($resultado) > 0) {
    //Si hay registro reenviar a la página menu.php
-   header("location: registro_arte.html");
+   header("location: usuario.php");
 } else {
    //Sino redirigir a la página index.html 
    header("location: anunciate.php");

@@ -77,22 +77,22 @@
       <img src="imagenes/logo.png" alt="logo" class="logo">
   </div>
   <div class="item2">
-      <div id="musica" onmouseover="changeColor('var(--music_red)')">
+      <div id="musica" onmouseover="changeColor('var(--music_red)')" onmouseout="changeColor('var(--advertisement_yellow)')">
           <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a>
       </div>
-      <div id="pintura" onmouseover="changeColor('var(--paint_green)')">
+      <div id="pintura" onmouseover="changeColor('var(--paint_green)')" onmouseout="changeColor('var(--advertisement_yellow)')">
           <a href="pintura.html" class="banner_text"><strong>PINTURA</strong></a>
       </div>
-      <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')">
+      <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')" onmouseout="changeColor('var(--advertisement_yellow)')">
           <a href="artesanias.html" class="banner_text"><strong>ARTESAN&#205;AS</strong></a>
       </div>
-      <div id="baile" onmouseover="changeColor('var(--dance_blue)')">
+      <div id="baile" onmouseover="changeColor('var(--dance_blue)')" onmouseout="changeColor('var(--advertisement_yellow)')">
           <a href="baile.html" class="banner_text"><strong>BAILE</strong></a>
       </div>
-      <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')">
+      <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--advertisement_yellow)')">
           <a href="anunciate.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
       </div>
-      <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')">
+      <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--advertisement_yellow)')">
           <a href="eventos.html" class="banner_text"><strong>EVENTOS</strong></a>
       </div>
   </div>
