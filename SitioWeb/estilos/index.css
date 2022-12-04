@@ -105,6 +105,9 @@ grid-template-rows: 40% auto;
     color: var(--white);
     margin-left: 15px;
 }
+.banner_text a:link, .banner_text a:visited{
+    text-decoration: none;
+}
 .artist-container{
     height: fit-content;
 }

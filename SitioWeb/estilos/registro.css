@@ -31,10 +31,11 @@
     border-radius: 50px 0px;
   }
   
-  .title {
+  .title  { 
     font-size: var(--lg);
     margin-bottom: 36px;
     text-align: start;
+    font-family: 'Signika', sans-serif;
   }
   .form {
     display: flex;

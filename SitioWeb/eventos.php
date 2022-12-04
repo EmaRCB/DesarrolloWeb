@@ -11,26 +11,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
     <script src="plantilla.js"></script>
-    <script src="eventos.js"></script>
+    <script>
+        function generarTextoCalendario(i){
+            var array = <?php echo json_encode(eventosArray()); ?>;
+
+            var f1 = document.getElementById("fecha"+i);
+            var n1 = document.getElementById("nom"+i);
+            var u1 = document.getElementById("ub"+i);
+
+            //Estos valores son temporales, luego se agregarán eventos.
+            f1.textContent += array[i]["fecha"];
+            n1.textContent += array[i]["ubicacion"];
+            u1.textContent += array[i]["nombreEvento"];
+        }
+        <?php
+                function eventosArray() {
+                    require "funciones.php";
+                    
+                    $servidor = "localhost: 3307";
+                    $usuario = "emanuel";
+                    $contrasena = "emanuel2002";
+                    $basedatos = "nido_local";
+                    
+                    $sentenciaSQL = "SELECT * FROM eventos ORDER BY fecha";
+
+                    $i = 1;
+
+
+                    $resultado = ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
+                
+
+                    return $resultado;
+                }
+                
+            
+            ?>
+
+            window.onload = function(){
+
+            for (var i = 0; i < 9; i++) {
+                generarTextoCalendario(i);
+            }
+            }
+    </script>
+
 </head>
 <body>
     <div class="grid-container">
         <div class="item1">
-            <a href="./index.html"><img src="../Recursos/logo.png" alt="logo" class="logo"></a>
+            <a href="./index.php"><img src="../Recursos/logo.png" class="logo" alt="logo"></a>
         </div>
         <div class="item2">
-                <div id="musica" onmouseover="changeColor('var(--music_red)')" onmouseout="colorRestart('var(--events_purple)')">
-                    <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a></div>
-                <div id="pintura" onmouseover="changeColor('var(--paint_green)')" onmouseout="colorRestart('var(--events_purple)')">
-                    <a href="pintura.html" class="banner_text"><strong>PINTURA</strong></a></div>
-                <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')" onmouseout="colorRestart('var(--events_purple)')">
-                    <a href="artesanias.html" class="banner_text"><strong>ARTESAN&#205;AS</strong></a></div>
-                <div id="baile" onmouseover="changeColor('var(--dance_blue)')" onmouseout="colorRestart('var(--events_purple)')">
-                    <a href="baile.html" class="banner_text"><strong>BAILE</strong></a></div>
-                <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="colorRestart('var(--events_purple)')">
-                    <a href="anunciate.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
-                <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="colorRestart('var(--events_purple)')">
-                    <a href="eventos.html" class="banner_text"><strong>EVENTOS</strong></a></div>
+            <div id="musica" onmouseover="changeColor('var(--music_red)')" onmouseout="changeColor('var(--dance_blue)')">
+                <a href="musica.php" class="banner_text"><strong>M&#218;SICA</strong></a>
+            </div>
+            <div id="pintura" onmouseover="changeColor('var(--paint_green)')" onmouseout="changeColor('var(--dance_blue)')">
+                <a href="pintura.php" class="banner_text"><strong>PINTURA</strong></a>
+            </div>
+            <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')" onmouseout="changeColor('var(--dance_blue)')">
+                <a href="artesanias.php" class="banner_text"><strong>ARTESAN&#205;AS</strong></a>
+            </div>
+            <div id="baile" onmouseover="changeColor('var(--dance_blue)')" onmouseout="changeColor('var(--dance_blue)')">
+                <a href="baile.php" class="banner_text"><strong>BAILE</strong></a>
+            </div>
+            <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--dance_blue)')">
+                <a href="usuario.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
+            </div>
+            <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--dance_blue)')">
+                <a href="eventos.php" class="banner_text"><strong>EVENTOS</strong></a>
+            </div>
         </div>
         <div class="item3">
             <div id="bar"></div>
@@ -42,7 +91,7 @@
             </div>
             <script>
                 function initMap(){
-                    var location = {lat: -25.363, lng: 131.044};
+                    var location = {lat: 20.967327962466417, lng: -89.62447385197794};
                     var map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 4,
                         center: location
@@ -60,6 +109,7 @@
             <p id="eventos_title">Eventos cerca de Mérida</p>
             <div class="calendar_box">
                 <div class="calendar_grid">
+                    <div class="calendar_id"><p id="fecha0"></p><p id="nom0"></p><p id="ub0"></p></div>
                     <div class="calendar_id"><p id="fecha1"></p><p id="nom1"></p><p id="ub1"></p></div>
                     <div class="calendar_id"><p id="fecha2"></p><p id="nom2"></p><p id="ub2"></p></div>
                     <div class="calendar_id"><p id="fecha3"></p><p id="nom3"></p><p id="ub3"></p></div>
@@ -68,7 +118,6 @@
                     <div class="calendar_id"><p id="fecha6"></p><p id="nom6"></p><p id="ub6"></p></div>
                     <div class="calendar_id"><p id="fecha7"></p><p id="nom7"></p><p id="ub7"></p></div>
                     <div class="calendar_id"><p id="fecha8"></p><p id="nom8"></p><p id="ub8"></p></div>
-                    <div class="calendar_id"><p id="fecha9"></p><p id="nom9"></p><p id="ub9"></p></div>
                 </div>
             </div>
         </div>

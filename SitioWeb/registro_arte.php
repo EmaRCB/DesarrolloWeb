@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    $varsesion = $_SESSION["usuario"];
+
+    //Si alguien no ha iniciado sesión o se conecta desde el link
+    if($varsesion == null || $varsesion = ''){
+        echo "Usted no ha iniciado sesión";
+        header("location: anunciate.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +31,7 @@
 </head>
 <body>
   <div class="item1">
-    <img src="../Recursos/logo.png" alt="logo" class="logo">
+  <a href="./index.php"><img src="../Recursos/logo.png" class="logo" alt="logo"></a>
   </div>
   <header id = "header" class ="item2">
     <div >
@@ -105,7 +115,7 @@
               
               <div class = "second-appearance-2-3">
                 <label class="label">Nombre Artístico</label>
-                <input type="text" placeholder="Escribe tu nombre" class="input"> 
+                <input type="text" placeholder=<?php echo $_SESSION["usuario"]?> class="input"> 
                 
               </div>
               <div class = "second-appearance-2-3">

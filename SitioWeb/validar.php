@@ -1,8 +1,12 @@
 <?php
 
-$servidor = "2806:10be:9:2131:c942:a3cb:f8f2:34df";
-$usuario = "karyme";
-$contrasena = "karyme2002";
+
+session_start();
+
+$servidor = "localhost: 3307";
+$usuario = "emanuel";
+$contrasena = "emanuel2002";
+
 $basedatos = "nido_local";
 
 if ($_REQUEST["usuario"] == "") {
@@ -27,7 +31,8 @@ mysqli_close($conexion);
 
 if (mysqli_num_rows($resultado) > 0) {
    //Si hay registro reenviar a la página menu.php
-   header("location: registro_arte.html");
+   $_SESSION["usuario"] = $_REQUEST["usuario"];
+   header("location: usuario.php");
 } else {
    //Sino redirigir a la página index.html 
    header("location: anunciate.php");

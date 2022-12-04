@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,34 +13,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
     <script>
+        
         function changeColor(color) {
             document.getElementById("bar").style.backgroundColor = color;
+        }
+
+        
+        function getImagesArray(){
+            var obj = <?php echo json_encode(imagesArray()); ?>;
+            <?php
+                function imagesArray() {
+                    require "funciones.php";
+                    
+                    $servidor = "localhost: 3307";
+                    $usuario = "emanuel";
+                    $contrasena = "emanuel2002";
+                    $basedatos = "nido_local";
+                    
+                    $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'musica'";
+    
+                    $i = 1;
+    
+    
+                    $resultado = ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
+                   
+    
+                    return $resultado;
+                }
+                
+            
+            ?>
+            return obj;
+
+        }
+        window.onload = function(){
+            for (var i = 0; i < 4; i++) {
+                imageLoad(i+1);
+            }
+            //getImagesArray();
         }
     </script>
 </head>
 
 <body>
+    <!--  REALIZAR PRUEBAS EN ESTA CLASE -->
     <div class="grid-container">
         <div class="item1">
             <img src="imagenes/logo.png" alt="logo" class="logo">
         </div>
         <div class="item2">
-            <div id="musica" onmouseover="changeColor('var(--music_red)')" onmouseout="changeColor('var(--dance_blue)')">
+            <div id="musica" onmouseover="changeColor('var(--music_red)')" onmouseout="changeColor('var(--music_red)')">
                 <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a>
             </div>
-            <div id="pintura" onmouseover="changeColor('var(--paint_green)')" onmouseout="changeColor('var(--dance_blue)')">
+            <div id="pintura" onmouseover="changeColor('var(--paint_green)')" onmouseout="changeColor('var(--music_red)')">
                 <a href="pintura.html" class="banner_text"><strong>PINTURA</strong></a>
             </div>
-            <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')" onmouseout="changeColor('var(--dance_blue)')">
+            <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')" onmouseout="changeColor('var(--music_red)')">
                 <a href="artesanias.html" class="banner_text"><strong>ARTESAN&#205;AS</strong></a>
             </div>
-            <div id="baile" onmouseover="changeColor('var(--dance_blue)')" onmouseout="changeColor('var(--dance_blue)')">
+            <div id="baile" onmouseover="changeColor('var(--dance_blue)')" onmouseout="changeColor('var(--music_red)')">
                 <a href="baile.html" class="banner_text"><strong>BAILE</strong></a>
             </div>
-            <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--dance_blue)')">
+            <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--music_red)')">
                 <a href="anunciate.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
             </div>
-            <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--dance_blue)')">
+            <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--music_red)')">
                 <a href="eventos.html" class="banner_text"><strong>EVENTOS</strong></a>
             </div>
         </div>
@@ -50,40 +88,40 @@
             <div class="slider2">
                 <div class="slide2-track">
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp 
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp 
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp 
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp 
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide2">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                 </div>
             </div>
@@ -150,62 +188,101 @@
             <div class="slider3">
                 <div class="slide3-track">
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                     <div class="slide3">
-                        BAILARINES DESTACADOS&nbsp
+                        MUSICOS DESTACADOS&nbsp
                     </div>
                 </div>
             </div>
 
 
             <div class="imagenesFijas">
-                <div class="grid-item">
-                    <img src="imagenes/arte1.jpeg">
-                </div>
-                <div class="grid-item">
-                    <img src="imagenes/arte2.jpeg">
-                </div>
-                <div id="visibility" class="grid-item">
-                    <img src="imagenes/arte3.jpeg">
-                </div>
-                <div id="visibility" class="grid-item">
-                    <img src="imagenes/arte1.jpeg">
-                </div>
-            </div>
-        
-        </div>
+            <script>
+                window.onload = function(){
+                    const array = getImagesArray();
+                    var arrayLength = array.length ;
+                    for (var i = 0; i < arrayLength; i++) {
+                        addDiv(i);
+                    }
+                }
+                function addDiv(i){
+                    var array = <?php echo json_encode(getImagess()); ?>;
+            <?php
+                function getImagess() {
+                    
+                    $servidor = "localhost: 3307";
+                    $usuario = "emanuel";
+                    $contrasena = "emanuel2002";
+                    $basedatos = "nido_local";
+                    
+                    $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'musica'";
+    
+                    $i = 1;
+    
+    
+                    $resultado = ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
+                   
+    
+                    return $resultado;
+                }
+                
+            
+            ?>
 
+                    const g = document.createElement('div');
+                    var name = "imgs-" + i;
+                    g.setAttribute("id", name);
+                    const text = document.createTextNode("");
+                    g.appendChild(text);
+                    
+                    document.getElementsByClassName('imagenesFijas')[0].appendChild(g);
+                    
+                    document.getElementById(name).style.height = "200px";
+                    document.getElementById(name).style.width = "300px";
+                    document.getElementById(name).style.backgroundColor = "red";
+                    document.getElementById(name).style.margin = "15px";
+                    document.getElementById(name).style.backgroundImage = "url('"+array[i]["linkFoto"]+"')";
+                    document.getElementById(name).style.backgroundSize = "cover";
+                    
+                }
+                
+            </script>
+            
+            </div>
+
+                
+        </div>
         <div class="item5">
             <p id="footer_sm">REDES SOCIALES PROXIMAMENTE
         </div>
