@@ -19,8 +19,13 @@ html,body{
     display: grid;
     width: 100%;
 }
-.gmaps_box, .calendar_box{
+.gmaps_box{
     height: 500px;
+    margin: 50px;
+    width: 90%;
+}
+.calendar_box{
+    height: fit-content;
     margin: 50px;
     width: 90%;
 }
