@@ -29,7 +29,7 @@
                     <a href="baile.php"  class="banner_text"><strong>BAILE</strong></a></div>
                 <div id="anunciate">
                     <img src="imagenes/pencil.png" class="icon" alt="music">
-                    <a href="anunciate.php"  class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
+                    <a href="usuario.php"  class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
                 <div id="eventos-proximos">
                     <img src="imagenes/calendar.png" class="icon" alt="music">
                     <a href="eventos.php"  class="banner_text"><strong>EVENTOS</strong></a></div>

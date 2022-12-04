@@ -75,7 +75,7 @@
                 <a href="baile.php" class="banner_text"><strong>BAILE</strong></a>
             </div>
             <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--dance_blue)')">
-                <a href="anunciate.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
+                <a href="usuario.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
             </div>
             <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--dance_blue)')">
                 <a href="eventos.php" class="banner_text"><strong>EVENTOS</strong></a>
@@ -91,7 +91,7 @@
             </div>
             <script>
                 function initMap(){
-                    var location = {X99H+F8 Mérida, Yucatán};
+                    var location = {lat: 20.967327962466417, lng: -89.62447385197794};
                     var map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 4,
                         center: location

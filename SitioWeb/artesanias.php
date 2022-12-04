@@ -64,7 +64,7 @@
                 <a href="baile.php" class="banner_text"><strong>BAILE</strong></a>
             </div>
             <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--crafts_pink)')">
-                <a href="anunciate.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
+                <a href="usuario.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
             </div>
             <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--crafts_pink)')">
                 <a href="eventos.php" class="banner_text"><strong>EVENTOS</strong></a>
