@@ -1,9 +1,9 @@
 <?php
 
-$servidor = "localhost: 3307";
-$usuario = "root";
-$contrasena = "";
-$basedatos = "tienda";
+$servidor = "2806:10be:9:2131:c942:a3cb:f8f2:34df";
+$usuario = "karyme";
+$contrasena = "karyme2002";
+$basedatos = "nido_local";
 
 if ($_REQUEST["usuario"] == "") {
 	header("location: anunciate.php?estado=1");
