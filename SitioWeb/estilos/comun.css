@@ -24,6 +24,7 @@ html,body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 .item2 { 
     grid-area: menu;
