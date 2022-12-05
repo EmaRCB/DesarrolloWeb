@@ -11,9 +11,9 @@ Cosas pendientes:
 
 |  | Pendientes |
 | ------------- | ------------- | 
-| X | Manejo de sesiones de usuario (2 pts.) |
+| SI | Manejo de sesiones de usuario (2 pts.) |
 | X | Protección contra ataques básicos (2 pto.) |
-| X | Administrar un catálogo de una base de datos (incluir búsqueda), uno de los campos deberá vincularse a otro catálogo de la misma base de datos (8 pts.) |
+| SI | Administrar un catálogo de una base de datos (incluir búsqueda), uno de los campos deberá vincularse a otro catálogo de la misma base de datos (8 pts.) |
 | X | Uso de vistas (snapshot), procedimientos almacenados (store procedure) y disparadores (trigger) (2 pts.) |
 | X | Manejo de cookies y local storage (2 pto.) |
 | X | Subir y descargar archivos (2 pts.) |
