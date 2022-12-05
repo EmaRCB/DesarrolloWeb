@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="search.js"></script>
     <script src="plantilla.js"></script>
     <script>
         function generarTextoCalendario(i){
@@ -85,6 +86,11 @@
             <div id="bar"></div>
         </div>
         <div class="item4"> 
+            <div class="search_box">
+                <div>Buscar:</div>
+                <input type="text" size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
+            </div>
             <div class="gmaps_box">
                 <div id="map" ></div>
                 <!--<iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6738.820327385671!2d-89.6159389359657!3d20.967330267817278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5671616868fa75%3A0xfe685b8e8345c314!2sPalacio%20de%20la%20M%C3%BAsica!5e0!3m2!1ses-419!2smx!4v1667685397881!5m2!1ses-419!2smx"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->

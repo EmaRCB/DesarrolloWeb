@@ -2,10 +2,7 @@
 
 session_start();
 
-$servidor = "localhost: 3307";
-$usuario = "emanuel";
-$contrasena = "emanuel2002";
-$basedatos = "nido_local";
+include("variables.php");
 
 if ($_REQUEST["usuario"] == "") {
 	header("location: anunciate.php?estado=1");
@@ -33,7 +30,7 @@ if (mysqli_num_rows($resultado) > 0) {
    header("location: usuario.php");
 } else {
    //Sino redirigir a la página index.html 
-   header("location: anunciate.php");
+   header("location: anunciate.php?estado=3");
 }
 
 ?>

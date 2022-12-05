@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="search.js"></script>
 </head>
 <body>
     <div class="grid-container">
@@ -40,6 +41,11 @@
             <div class="logo-container">
                 <a href="./index.php"><img src="../Recursos/logo.png" class="logo" alt="logo"></a>
                 <p class="slogan">El lugar para los nuevos talentos</p>
+            </div>
+            <div class="search_box">
+                <div>Buscar:</div>
+                <input type="text" size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
             </div>
         </div>  
         <div class="item3">

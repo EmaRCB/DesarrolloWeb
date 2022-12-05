@@ -1,3 +1,32 @@
+<?php
+  // Validación clásica
+$estado = (isset($_REQUEST["estado"]) && is_numeric($_REQUEST["estado"])) ? $_REQUEST["estado"] : 0;
+$usuario = (isset($_REQUEST["usuario"]) && is_string($_REQUEST["usuario"])) ? $_REQUEST["usuario"] : "";
+
+// Validación con filtro
+//$estado = filter_input(INPUT_GET, "estado", FILTER_SANITIZE_URL);
+//$usuario = filter_input(INPUT_GET, "usuario", FILTER_SANITIZE_STRING);
+
+switch ($estado) {
+    case 1:
+        $cadena = "Debe proporcionar tu nombre de usuario.";
+        break;
+    case 2:
+        $cadena = "Debe proporcionar su contrase&ntilde;a.";
+        break;
+    case 3:
+        $cadena = "El nombre de usuario o la contrase&ntilde;a son incorrectos.";
+        break;
+    case 4:
+        $cadena = "Debes iniciar sesi&oacute;n para utilizar el sistema.";
+        break;
+    case 5:
+        $cadena = "Sesión cerrada.";
+        break;
+    default:
+    	$cadena = "";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +41,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
   <script src="plantilla.js"></script>
   <title>Iniciar sesión</title>
+  <style>
+    :root{
+      --advertisement_yellow: #FFA30C;
+    }
+    #estado {
+			background-color: var(--advertisement_yellow);
+			color: white;
+      visibility: hidden;
+ 			margin-bottom: 4px;
+ 			padding: 4px;
+    	width: 100%;
+ 		}
+  </style>
   
   <script>
 	
 	
-	function ocultarPanelEstado(panelEstado) {
-		document.getElementById("estado").style.visibility = "hidden";
-	}
-		
-	window.onload = function () {
+	  <?php echo "var estado = '" . $cadena . "';"; ?>
 	
+    function ocultarPanelEstado(panelEstado) {
+      document.getElementById("estado").style.visibility = "hidden";
+    }
+      
+    window.onload = function () {
+
+      document.forma.onsubmit = function () {
+          
+        // Validación individual
+        if (document.forma.usuario.value == "") {
+          alert("Debe proporcionar el nombre de usuario.");
+          document.forma.usuario.focus();
+          return false;
+        }
+      }
+    
+      document.forma.usuario.value = "<?php echo $usuario; ?>";
+    
+      if (estado != "") {
+        panelEstado = document.getElementById("estado");
+        panelEstado.innerHTML = estado;
+        panelEstado.style.visibility = "visible";
+        setTimeout(ocultarPanelEstado, 3000);
+      }
 	
+	  }
 	
-	}
+
+	
 	
 	</script>
 </head>
@@ -65,6 +129,7 @@
         </div>
       
         <h1 class="title">INICIAR SESIÓN</h1>
+        <div id="estado">Mensaje</div>
 
         <form action="validar.php" method="get" name="forma" class="form">
           <div>
