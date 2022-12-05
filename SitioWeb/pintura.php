@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="search.js"></script>
     <script>
         function changeColor(color) {
             document.getElementById("bar").style.backgroundColor = color;
@@ -23,10 +24,7 @@
                 function imagesArray() {
                     require "funciones.php";
                     
-                    $servidor = "localhost: 3307";
-                    $usuario = "emanuel";
-                    $contrasena = "emanuel2002";
-                    $basedatos = "nido_local";
+                    include("variables.php");
                     
                     $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'pintura'";
     
@@ -76,6 +74,11 @@
             <div id="bar"></div>
         </div>
         <div class="item4">
+            <div class="search_box">
+                <div>Buscar:</div>
+                <input type="text" size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
+            </div>
             <div class="slider2">
                 <div class="slide2-track">
                     <div class="slide2">
@@ -232,10 +235,7 @@
                 <?php
                     function getImagess() {
                         
-                        $servidor = "localhost: 3307";
-                        $usuario = "emanuel";
-                        $contrasena = "emanuel2002";
-                        $basedatos = "nido_local";
+                        include("variables.php");
                         
                         $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'pintura'";
         

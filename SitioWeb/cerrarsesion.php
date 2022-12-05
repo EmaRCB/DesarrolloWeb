@@ -3,5 +3,5 @@
 
     session_destroy();
 
-    header("location: anunciate.php");
+    header("location: anunciate.php?estado=5");
 ?>

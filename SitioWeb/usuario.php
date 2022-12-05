@@ -5,7 +5,7 @@
     //Si alguien no ha iniciado sesión o se conecta desde el link
     if($varsesion == null || $varsesion = ''){
         echo "Usted no ha iniciado sesión";
-        header("location: anunciate.php");
+        header("location: anunciate.php?estado=4");
     }
 ?>
 <!DOCTYPE html>
@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
     <script src="plantilla.js"></script>
+    <script src="search.js"></script>
 </head>
 <body>
     <div class="grid-container">
@@ -51,6 +52,11 @@
             <div id="bar"></div>
         </div>
         <div class="item4"> 
+            <div class="search_box">
+                <div>Buscar:</div>
+                <input type="text" size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
+            </div>
             <div class="user_header">
                 <div id="profile_picture">
                     
@@ -63,11 +69,10 @@
                     <?php
 
                         function verFotoPerfil() {
-                            $servidor = "localhost: 3307";
-                            $usuario = "emanuel";
-                            $contrasena = "emanuel2002";
-                            $basedatos = "nido_local";
+                            include("variables.php");
                             
+                        
+
                             $sentenciaSQL = "SELECT p.foto FROM usuarios as u join perfiles as p on p.idUsuario = u.id_usuario join proyectos as pr on pr.idPerfil = p.id_perfil where usuario = '" . $_SESSION["usuario"] . "'";
 
                             //$cadena = "<table border='3' style='overflow-x:auto;'> <tr> <th> Categoría </th><th> Nombre del proyecto </th><th> Link foto </th> </tr>";
@@ -76,6 +81,8 @@
 
                             return "url('" . $resultado[0]["foto"] . "')";
                         }
+
+
                     ?>
                         document.getElementById("profile_picture").style.backgroundImage = resultado;
                         document.getElementById("profile_picture").style.backgroundSize = "cover";
@@ -92,10 +99,7 @@
                     echo verProyectos();
 
                     function verProyectos() {
-                        $servidor = "localhost: 3307";
-                        $usuario = "emanuel";
-                        $contrasena = "emanuel2002";
-                        $basedatos = "nido_local";
+                        include("variables.php");
                         
                         $sentenciaSQL = "SELECT * FROM usuarios as u join perfiles as p on p.idUsuario = u.id_usuario join proyectos as pr on pr.idPerfil = p.id_perfil where usuario = '" . $_SESSION["usuario"] . "'";
                     

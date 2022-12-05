@@ -2,6 +2,8 @@
     session_start();
     $varsesion = $_SESSION["usuario"];
 
+    
+
     //Si alguien no ha iniciado sesión o se conecta desde el link
     if($varsesion == null || $varsesion = ''){
         echo "Usted no ha iniciado sesión";
@@ -57,7 +59,7 @@
               </h1>
               
           </div>
-          <form action="" class="form" id = "right-section">
+          <form action="agregar_arte.php" class="form" id = "right-section">
             <div class = "form-top">
               <div class >
                 <h1>
@@ -66,12 +68,12 @@
                 
               </div>
               <div class="select">
-                <select id = "categories" >
-                  <option selected="true" disabled="disabled">Selecciona una categoría</option>
-                  <option value="1">Música</option>
-                  <option value="2">Pintura</option>
-                  <option value="3">Artesanías</option>
-                  <option value="4">Baile</option>
+                <select id = "categories" name="category"  >
+                  <option selected="true" name="category" disabled="disabled">Selecciona una categoría</option>
+                  <option value="1">MUSICA</option>
+                  <option value="2">PINTURA</option>
+                  <option value="3">ARTESANIAS</option>
+                  <option value="4">DANZA</option>
                 </select>
               </div>
             </div>
@@ -115,15 +117,12 @@
               
               <div class = "second-appearance-2-3">
                 <label class="label">Nombre Artístico</label>
-                <input type="text" placeholder=<?php echo $_SESSION["usuario"]?> class="input"> 
+                <input type="text" name="projectName" placeholder=<?php echo $_SESSION["usuario"]?> class="input"> 
                 
               </div>
               <div class = "second-appearance-2-3">
                 <label class="label">Comparte los links de tus redes</label>
-                <input type="text" placeholder="Pega la ruta de enlace aquí" class="input-link">
-                <input type="text" placeholder="Pega la ruta de enlace aquí" class="input-link">
-                <input type="text" placeholder="Pega la ruta de enlace aquí" class="input-link">
-                <input type="text" placeholder="Pega la ruta de enlace aquí" class="input-link"> 
+                <input type="text" name="link" placeholder="Pega la ruta de enlace aquí" class="input-link">
                 
               </div>
               <div>
