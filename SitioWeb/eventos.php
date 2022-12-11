@@ -34,7 +34,7 @@
                     $contrasena = "emanuel2002";
                     $basedatos = "nido_local";
                     
-                    $sentenciaSQL = "SELECT * FROM eventos ORDER BY fecha";
+                    $sentenciaSQL = "SELECT * FROM eventos WHERE fecha >= CURDATE() ORDER BY fecha";
 
                     $i = 1;
 

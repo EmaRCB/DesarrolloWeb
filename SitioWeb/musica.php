@@ -77,110 +77,56 @@
             <div id="bar"></div>
         </div>
         <div class="item4">
-            <div class="search_box">
-                <div>Buscar:</div>
-                <input type="text" size="30" onkeyup="showResult(this.value)">
-                <div id="livesearch"></div>
-            </div>
+            
             <div class="slider2">
                 <div class="slide2-track">
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        MUSICOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                 </div>
             </div>
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide">
-                        <img src="imagenes/arte1.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte2.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte3.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="imagenes/slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte1.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte2.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte3.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte1.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte2.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte3.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-
+            <div class="main-container">
+                <div class="cont-destacada-container">
+                    <iframe class="cont-destacada" src="https://www.youtube.com/embed/MWlN33vnOP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
                 </div>
-
+                <div class="search_box">
+                    <div>Buscar:</div>
+                    <input type="text" size="30" onkeyup="showResult(this.value)">
+                    <div id="livesearch"></div>
+                </div>
             </div>
             <div class="slider3">
                 <div class="slide3-track">
@@ -254,11 +200,13 @@
             
             ?>
 
-                    const g = document.createElement('div');
+                    const g = document.createElement('a');
                     var name = "imgs-" + i;
                     g.setAttribute("id", name);
                     const text = document.createTextNode("");
                     g.appendChild(text);
+                    
+                    g.href = "./proyecto.php?proyecto=" + array[i]["id_proyecto"];  
                     
                     document.getElementsByClassName('imagenesFijas')[0].appendChild(g);
                     
