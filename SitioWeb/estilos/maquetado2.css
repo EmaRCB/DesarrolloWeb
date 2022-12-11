@@ -8,67 +8,44 @@
     }
 }
 
-.slider {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-    height: 350px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: 1350px;
-}
-
-.slider::before,
-.slider::after {
-    content: "";
-    height: 300px;
-    position: absolute;
-    width: 5%;
-    z-index: 2;
-}
-
-.slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider .slide-track {
-    animation: scroll 80s linear infinite;
+.main-container{
     display: flex;
-    width: calc(450px * 12);
-    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: baseline;
+    height: 500px;
+    width: 100%;
+    background-color: var(--white);
 }
 
-.slider .slide {
-    width: 450px;
-    height: 300px;
+.cont-destacada-container{
+    height: 90%;
+    width: 650px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.cont-destacada{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
-.slide img {
-    width: 450px;
-    height: 300px;
-}
+
 
 
 .slider2 {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    background-color: var(--gray);
+    box-shadow: 0px 0px 0px -5px rgba(0, 0, 0, .125);
     height: 90px;
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 1350px;
+    width: 1450px;
 }
 
 .slider2::before,
 .slider2::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, var(--gray) 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 90px;
     position: absolute;
@@ -98,7 +75,7 @@
     width: 450px;
 }
 .slider2 .slide2 {
-
+    line-height: 90px;
     text-align: center;
     font-size: 40px;
     font-family: 'Signika', sans-serif;
@@ -112,8 +89,8 @@
 
 
 .slider3 {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    background-color: var(--gray);
+    box-shadow: 0px 0px 0px -5px rgba(0, 0, 0, .125);
     height: 90px;
     margin: auto;
     overflow: hidden;
@@ -123,7 +100,7 @@
 
 .slider3::before,
 .slider3::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, var(--gray) 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 90px;
     position: absolute;
@@ -154,7 +131,7 @@
 }
 
 .slider3 .slide3 {
-
+    line-height: 90px;
     text-align: center;
     font-size: 40px;
     font-family: 'Signika', sans-serif;

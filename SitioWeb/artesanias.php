@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="search.js"></script>
     <script>
         function changeColor(color) {
             document.getElementById("bar").style.backgroundColor = color;
@@ -21,10 +25,7 @@
                 function imagesArray() {
                     require "funciones.php";
                     
-                    $servidor = "localhost: 3307";
-                    $usuario = "emanuel";
-                    $contrasena = "emanuel2002";
-                    $basedatos = "nido_local";
+                    include("variables.php");
                     
                     $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'artesanias'";
     
@@ -74,144 +75,94 @@
             <div id="bar"></div>
         </div>
         <div class="item4">
+
             <div class="slider2">
                 <div class="slide2-track">
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                     <div class="slide2">
-                        ARTESANOS DESTACADOS&nbsp
+                        PROYECTO DESTACADO
                     </div>
                 </div>
             </div>
-            <div class="slider">
-                <div class="slide-track">
-                    
-                    <div class="slide">
-                        <img src="imagenes/arte1.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte2.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte3.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="imagenes/slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte1.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte2.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte3.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte1.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte2.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-                    <div class="slide">
-                        <img src="imagenes/arte3.jpeg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-
-                    </div>
-
+            <div class="main-container">
+                <div class="cont-destacada-container">
+                    <iframe class="cont-destacada" src="https://www.youtube.com/embed/fCRgms-lJYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
                 </div>
-
+                <div class="search_box">
+                    <div>Buscar:</div>
+                    <input type="text" size="30" onkeyup="showResult(this.value)">
+                    <div id="livesearch"></div>
+                </div>
             </div>
             <div class="slider3">
                 <div class="slide3-track">
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                     <div class="slide3">
-                        ARTESANOS DESTACADOS&nbsp
+                        ARTESANOS NOTABLES
                     </div>
                 </div>
             </div>
@@ -231,14 +182,12 @@
                 <?php
                     function getImagess() {
                         
-                        $servidor = "localhost: 3307";
-                        $usuario = "emanuel";
-                        $contrasena = "emanuel2002";
-                        $basedatos = "nido_local";
+                        include("variables.php");
                         
                         $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'artesanias'";
+                        //$sentenciaSQL = "CALL ObtenerProyectosArtesanias()";
         
-                        $i = 1;
+                      
         
         
                         $resultado = ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
@@ -250,11 +199,13 @@
                 
                 ?>
 
-                    const g = document.createElement('div');
+                    const g = document.createElement('a');
                     var name = "imgs-" + i;
                     g.setAttribute("id", name);
                     const text = document.createTextNode("");
                     g.appendChild(text);
+                    
+                    g.href = "./proyecto.php?proyecto=" + array[i]["id_proyecto"]; 
                     
                     document.getElementsByClassName('imagenesFijas')[0].appendChild(g);
                     

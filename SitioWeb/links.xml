@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages>
+  <link>
+    <title>Musica</title>
+    <url>musica.php</url>
+  </link>
+  <link>
+    <title>Pagina principal</title>
+    <url>index.php</url>
+  </link>
+  <link>
+    <title>Pintura</title>
+    <url>pintura.php</url>
+  </link>
+  <link>
+    <title>Artesanias</title>
+    <url>artesanias.php</url>
+  </link>
+  <link>
+    <title>Danza</title>
+    <url>baile.php</url>
+  </link>
+  <link>
+    <title>Baile</title>
+    <url>baile.php</url>
+  </link>
+  <link>
+    <title>Eventos</title>
+    <url>eventos.php</url>
+  </link>
+</pages>

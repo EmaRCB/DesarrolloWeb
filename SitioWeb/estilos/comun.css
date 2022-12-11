@@ -26,6 +26,20 @@ html,body{
     text-align: center;
     
 }
+.search_box{
+    display: grid;
+    padding: 5px;
+    height: 100px;
+    justify-content: end;
+    overflow: hidden;
+}
+.search_box input{
+    height: 15px;
+}
+.search_box div{
+    font-size: medium;
+    font-family: 'Signika', sans-serif;
+}
 .item2 { 
     grid-area: menu;
     display: flex;
