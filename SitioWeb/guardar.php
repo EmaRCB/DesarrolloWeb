@@ -30,6 +30,14 @@ if (empty($_REQUEST["password2"])) {
 }
 
 
+$correctuser = strip_tags($_REQUEST["username"]);
+$correctpass = strip_tags($_REQUEST["password"]);
+$correctname = strip_tags($_REQUEST["name"]);
+$correctemail = strip_tags($_REQUEST["email"]);
+
+$sentenciaSQL = "INSERT INTO usuarios (usuario, contrasena, nombre, email) VALUES ('" . $correctuser . "', '" . $correctpass . "', '" . $correctname . "', '" . $correctemail . "')";
+
+
 global $nombreArchivo;
 
 if(isset($_POST['boton'])){

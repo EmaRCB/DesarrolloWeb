@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Baile</title>
     <link rel="stylesheet" href="estilos/comun.css">
     <link rel="stylesheet" href="estilos/maquetado2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

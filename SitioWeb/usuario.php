@@ -154,9 +154,11 @@ alert("Bienvenido "+ localStorage.getItem("Nombre")+ " a "+ "Nido Local")
                 <div class="button">
                     <a href="eliminar_arte.php">ELIMINAR UN PROYECTO</a>
                 </div>
+
                 <div class="button">
                     <a href="descargar.php">Descargar datos</a>
                 </div>
+
             </div>
             
             
