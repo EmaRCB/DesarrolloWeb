@@ -111,7 +111,7 @@
         
           <h1 class="title">REGISTRATE</h1>
 
-          <form name="forma" action="guardar.php" method="post">
+          <form name="forma" action="guardar.php" method="post" enctype='multipart/form-data'>
             <div>
               <label for="username" class="label">Nombre de usuario</label></br>
               <input type="text" name="username" id="username" placeholder="alexandro929" class="input input-name"></br>
@@ -127,6 +127,8 @@
 
               <label for="password2" class="label">Confirmar contraseña:</label></br>
               <input type="password" name="password2" id="password2" placeholder="*********" class="input input-password"></br>
+              
+              <input type="file" name="file[]" id="file" multiple>
             </div>
 
             <input type="submit" name="boton" value="Registrar" class="primary-button login-button">>

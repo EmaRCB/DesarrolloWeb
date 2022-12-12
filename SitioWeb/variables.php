@@ -1,8 +1,8 @@
 <?php
 
-$servidor = "localhost: 3307";
-$usuario = "emanuel";
-$contrasena = "emanuel2002";
+$servidor = "localhost: 3306";
+$usuario = "Karyme";
+$contrasena = "karyme2002";
 $basedatos = "nido_local";
 
 ?>
