@@ -1,6 +1,10 @@
+
 <?php
     session_start();
+?>
+<?php
     $varsesion = $_SESSION["usuario"];
+    
 
     //Si alguien no ha iniciado sesión o se conecta desde el link
     if($varsesion == null || $varsesion = ''){
@@ -8,6 +12,20 @@
         header("location: anunciate.php?estado=4");
     }
 ?>
+<script>
+    var resultado = "<?php echo nombreSesion() ?>";
+    localStorage.setItem('Nombre', resultado);
+    <?php
+
+    function nombreSesion() {
+        return $_SESSION["usuario"];
+    }
+    ?>
+
+
+alert("Bienvenido "+ localStorage.getItem("Nombre")+ " a "+ "Nido Local")
+ </script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +105,9 @@
                         document.getElementById("profile_picture").style.backgroundImage = resultado;
                         document.getElementById("profile_picture").style.backgroundSize = "cover";
                     </script>
-                <div class="main_title">Bienvenide  <?php echo $_SESSION["usuario"]?>!</div>
+                    
+                <div class="main_title">Hola <?php echo $_SESSION["usuario"]?>!</div>
+                </script>
             </div>
             
 
@@ -131,6 +151,12 @@
                 <div class="button">
                     <a href="registro_arte.php">AGREGAR UN PROYECTO</a>
                 </div>
+                <div class="button">
+                    <a href="eliminar_arte.php">ELIMINAR UN PROYECTO</a>
+                </div>
+                <div class="button">
+                    <a href="descargar.php">Descargar datos</a>
+                </div>
             </div>
             
             
@@ -139,5 +165,4 @@
             <p id="footer_sm">REDES SOCIALES PROXIMAMENTE</p>
         </div>
     </div>
-</body>
-</html>
+</body
