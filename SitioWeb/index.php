@@ -55,7 +55,7 @@
                 </div>
                 <div class="leyenda">
                     <p>En reproducción:</p>
-                    <p>Taylor Swift: 'Snow at the Beach'</p>
+                    <p>Florence + The Machine: 'Ship to Wreck'</p>
                 </div>
             </div>
             
