@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registo de arte</title>
-    <link rel="stylesheet" type="text/css" href="estilos/estilo_registro_musica.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilo_eliminar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
@@ -49,17 +49,17 @@
       <div class="form-container">
           <div id = "left-section">
               <h1 class = "texto" id = "comparte">
-                Comparte
-              </h1>
-              <h1 class = "texto">
-                con el mundo 
+                Elimina
               </h1>
               <h1 class = "texto">
                 tu arte
               </h1>
+              <h1 class = "texto">
+                :(
+              </h1>
               
           </div>
-          <form action="agregar_arte.php" class="form" id = "right-section">
+          <form action="eliminar.php" class="form" id = "right-section">
             <div class = "form-top">
               <div class >
                 <h1>
@@ -107,12 +107,7 @@
                     </select>
                   </div>
                 </div>
-                <div class = "toGrid">
-                  <label class="label">Género</label>
-                  <div>
-                    <input type="text" placeholder="Escribe el género de danza" class="input-genero"> 
-                  </div>
-                </div>
+                
               </div>
               
               <div class = "second-appearance-2-3">
@@ -120,13 +115,9 @@
                 <input type="text" name="projectName" placeholder="Nombra tu proyecto" class="input"> 
                 
               </div>
-              <div class = "second-appearance-2-3">
-                <label class="label">Comparte el url de tu imágen</label>
-                <input type="text" name="link" placeholder="Pega la ruta de enlace aquí" class="input-link">
-                
-              </div>
+              
               <div>
-                <input  id = "submitButton" type="submit" value="Subir Contenido" class="primary-button login-button" >
+                <input  id = "submitButton" type="submit" value="Eliminar Contenido" class="primary-button login-button" >
               </div>
               
               
@@ -145,7 +136,7 @@
   
 </body>
 
-<script src="js_registro.js">
+<script src="js_eliminar.js">
     
 </script>
 </html>

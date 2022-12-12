@@ -4,8 +4,8 @@ $estado = (isset($_REQUEST["estado"]) && is_numeric($_REQUEST["estado"])) ? $_RE
 $usuario = (isset($_REQUEST["usuario"]) && is_string($_REQUEST["usuario"])) ? $_REQUEST["usuario"] : "";
 
 // Validación con filtro
-//$estado = filter_input(INPUT_GET, "estado", FILTER_SANITIZE_URL);
-//$usuario = filter_input(INPUT_GET, "usuario", FILTER_SANITIZE_STRING);
+$estado = filter_input(INPUT_GET, "estado", FILTER_SANITIZE_URL);
+$usuario = filter_input(INPUT_GET, "usuario", FILTER_SANITIZE_STRING);
 
 switch ($estado) {
     case 1:

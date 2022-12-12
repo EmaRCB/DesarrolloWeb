@@ -131,6 +131,9 @@
                 <div class="button">
                     <a href="registro_arte.php">AGREGAR UN PROYECTO</a>
                 </div>
+                <div class="button">
+                    <a href="eliminar_arte.php">ELIMINAR UN PROYECTO</a>
+                </div>
             </div>
             
             
