@@ -27,6 +27,7 @@
                     include("variables.php");
                     
                     $sentenciaSQL = "SELECT * FROM proyectos WHERE categoria = 'danza'";
+                    //$sentenciaSQL = "CALL ObtenerProyectosDanza();";
     
                     $i = 1;
     

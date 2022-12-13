@@ -23,7 +23,7 @@
     ?>
 
 
-alert("Bienvenido "+ localStorage.getItem("Nombre")+ " a "+ "Nido Local")
+alert("Bienvenide "+ localStorage.getItem("Nombre")+ " a "+ "Nido Local")
  </script>
 
 <!DOCTYPE html>
@@ -106,7 +106,7 @@ alert("Bienvenido "+ localStorage.getItem("Nombre")+ " a "+ "Nido Local")
                         document.getElementById("profile_picture").style.backgroundSize = "cover";
                     </script>
                     
-                <div class="main_title">Hola <?php echo $_SESSION["usuario"]?>!</div>
+                <div class="main_title">Bienvenide <?php echo $_SESSION["usuario"]?>!</div>
                 </script>
             </div>
             
@@ -156,7 +156,7 @@ alert("Bienvenido "+ localStorage.getItem("Nombre")+ " a "+ "Nido Local")
                 </div>
 
                 <div class="button">
-                    <a href="descargar.php">Descargar datos</a>
+                    <a href="descargar.php">DESCARGAR DATOS</a>
                 </div>
 
             </div>

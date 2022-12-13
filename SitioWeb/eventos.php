@@ -141,7 +141,6 @@
                     var marker1 = new google.maps.Marker({
                         position: location1, 
                         label: labels[labelIndex++ % labels.length],
-                        title: "AA",
                         animation: google.maps.Animation.DROP,
                         map: map
                     });

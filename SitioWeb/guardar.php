@@ -51,15 +51,15 @@ if(isset($_POST['boton'])){
 		$nombreArchivo = $filename;
  
         // Upload file
-        move_uploaded_file($_FILES['file']['tmp_name'][$i],'C:\xampp\htdocs\DesarrolloWeb-1\SitioWeb\imagenesSubidas\ '.$filename);
+        move_uploaded_file($_FILES['file']['tmp_name'][$i],'C:\xampp\htdocs\DesarrolloWeb\SitioWeb\imagenesSubidas\ '.$filename);
  
     }
 } 
 
-$file='C:/xampp/htdocs/DesarrolloWeb-1/SitioWeb/imagenesSubidas/ ' . $nombreArchivo;
+$file='C:/xampp/htdocs/DesarrolloWeb/SitioWeb/imagenesSubidas/ ' . $nombreArchivo;
 
 
-$sentenciaSQL = "INSERT INTO usuarios (usuario, contrasena, nombre, email, foto) VALUES ('" . $_REQUEST["username"] . "', '" . $_REQUEST["password"] . "', '" . $_REQUEST["name"] . "', '" . $_REQUEST["email"] ."', '". $file . "')";
+$sentenciaSQL = "INSERT INTO usuarios (usuario, contrasena, nombre, email, fotoUser) VALUES ('" . $_REQUEST["username"] . "', '" . $_REQUEST["password"] . "', '" . $_REQUEST["name"] . "', '" . $_REQUEST["email"] ."', '". $file . "')";
 // $sentenciaSQL2 = "SELECT p.foto FROM usuarios as u join perfiles as p on p.idUsuario = u.id_usuario join proyectos as pr on pr.idPerfil = p.id_perfil where usuario = '" . $_SESSION["usuario"] . "'";
 // $resultado=ConsultarSQL($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL2); 
 // $idUser=$resultado[$_REQUEST["username"]]["id_usuario"];
