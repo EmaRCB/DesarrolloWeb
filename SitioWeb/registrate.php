@@ -73,29 +73,29 @@
 </head>
 <body>
   <div class="grid-container">
-    <div class="item1">
-      <img src="imagenes/logo.png" alt="logo" class="logo">
+  <div class="item1">
+  <a href="./index.php"><img src="../Recursos/logo.png" class="logo" alt="logo"></a>
   </div>
   <div class="item2">
-      <div id="musica" onmouseover="changeColor('var(--music_red)')">
-          <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a>
-      </div>
-      <div id="pintura" onmouseover="changeColor('var(--paint_green)')">
-          <a href="pintura.html" class="banner_text"><strong>PINTURA</strong></a>
-      </div>
-      <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')">
-          <a href="artesanias.html" class="banner_text"><strong>ARTESAN&#205;AS</strong></a>
-      </div>
-      <div id="baile" onmouseover="changeColor('var(--dance_blue)')">
-          <a href="baile.html" class="banner_text"><strong>BAILE</strong></a>
-      </div>
-      <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')">
-          <a href="anunciate.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
-      </div>
-      <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')">
-          <a href="eventos.html" class="banner_text"><strong>EVENTOS</strong></a>
-      </div>
-  </div>
+            <div id="musica" onmouseover="changeColor('var(--music_red)')" onmouseout="changeColor('var(--advertisement_yellow)')">
+                <a href="musica.php" class="banner_text"><strong>M&#218;SICA</strong></a>
+            </div>
+            <div id="pintura" onmouseover="changeColor('var(--paint_green)')" onmouseout="changeColor('var(--advertisement_yellow)')">
+                <a href="pintura.php" class="banner_text"><strong>PINTURA</strong></a>
+            </div>
+            <div id="artesanias" onmouseover="changeColor('var(--crafts_pink)')" onmouseout="changeColor('var(--advertisement_yellow)')">
+                <a href="artesanias.php" class="banner_text"><strong>ARTESAN&#205;AS</strong></a>
+            </div>
+            <div id="baile" onmouseover="changeColor('var(--dance_blue)')" onmouseout="changeColor('var(--advertisement_yellow)')">
+                <a href="baile.php" class="banner_text"><strong>BAILE</strong></a>
+            </div>
+            <div id="anunciate" onmouseover="changeColor('var(--advertisement_yellow)')" onmouseout="changeColor('var(--advertisement_yellow)')">
+                <a href="usuario.php" class="banner_text"><strong>AN&#218;NCIATE</strong></a>
+            </div>
+            <div id="eventos-proximos" onmouseover="changeColor('var(--events_purple)')" onmouseout="changeColor('var(--advertisement_yellow)')">
+                <a href="eventos.php" class="banner_text"><strong>EVENTOS</strong></a>
+            </div>
+        </div>
   <div class="item3">
       <div id="bar"></div>
   </div>
@@ -111,7 +111,7 @@
         
           <h1 class="title">REGISTRATE</h1>
 
-          <form name="forma" action="guardar.php" method="post">
+          <form name="forma" action="guardar.php" method="post" enctype='multipart/form-data'>
             <div>
               <label for="username" class="label">Nombre de usuario</label></br>
               <input type="text" name="username" id="username" placeholder="alexandro929" class="input input-name"></br>
@@ -127,6 +127,8 @@
 
               <label for="password2" class="label">Confirmar contraseña:</label></br>
               <input type="password" name="password2" id="password2" placeholder="*********" class="input input-password"></br>
+              
+              <input type="file" name="file[]" id="file" multiple>
             </div>
 
             <input type="submit" name="boton" value="Registrar" class="primary-button login-button">>

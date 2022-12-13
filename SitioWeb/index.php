@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <script src="search.js"></script>
 </head>
 <body>
     <div class="grid-container">
@@ -17,31 +18,35 @@
                 <div class="empty-space"></div>
                 <div id="musica">
                     <img src="imagenes/music.png" class="icon" alt="music">
-                    <a href="musica.html" class="banner_text"><strong>M&#218;SICA</strong></a></div>
+                    <a href="musica.php" class="banner_text"><strong>M&#218;SICA</strong></a></div>
                 <div id="pintura">
                     <img src="imagenes/pintura.png" class="icon" alt="music">
-                    <a href="pintura.html"  class="banner_text"><strong>PINTURA</strong></a></div>
+                    <a href="pintura.php"  class="banner_text"><strong>PINTURA</strong></a></div>
                 <div id="artesanias">
                     <img src="imagenes/art.png" class="icon" alt="music">
-                    <a href="artesanias.html"  class="banner_text"><strong>ARTESAN&#205;AS</strong></a></div>
+                    <a href="artesanias.php"  class="banner_text"><strong>ARTESAN&#205;AS</strong></a></div>
                 <div id="baile">
                     <img src="imagenes/dance.png" class="icon" alt="music">
-                    <a href="baile.html"  class="banner_text"><strong>BAILE</strong></a></div>
+                    <a href="baile.php"  class="banner_text"><strong>BAILE</strong></a></div>
                 <div id="anunciate">
                     <img src="imagenes/pencil.png" class="icon" alt="music">
-                    <a href="anunciate.php"  class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
+                    <a href="usuario.php"  class="banner_text"><strong>AN&#218;NCIATE</strong></a></div>
                 <div id="eventos-proximos">
                     <img src="imagenes/calendar.png" class="icon" alt="music">
-                    <a href="eventos.html"  class="banner_text"><strong>EVENTOS</strong></a></div>
+                    <a href="eventos.php"  class="banner_text"><strong>EVENTOS</strong></a></div>
                 <div class="empty-space"></div>
             </div>
         </div>
         <div class="item2">
             <div class="logo-container">
-                <img src="../Recursos/logo.png" class="logo" alt="logo">
+                <a href="./index.php"><img src="../Recursos/logo.png" class="logo" alt="logo"></a>
                 <p class="slogan">El lugar para los nuevos talentos</p>
             </div>
-            
+            <div class="search_box">
+                <div>Buscar:</div>
+                <input type="text" size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
+            </div>
         </div>  
         <div class="item3">
             <div class="artist-container">
@@ -50,7 +55,7 @@
                 </div>
                 <div class="leyenda">
                     <p>En reproducción:</p>
-                    <p>Taylor Swift: 'Snow at the Beach'</p>
+                    <p>Florence + The Machine: 'Ship to Wreck'</p>
                 </div>
             </div>
             

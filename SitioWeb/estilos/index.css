@@ -24,6 +24,7 @@ html,body{
     display: grid;
     align-items:center;
     justify-items: center;
+    grid-template-rows: auto 25%;
 }
 .item3 { 
     display: grid;
@@ -104,6 +105,25 @@ grid-template-rows: 40% auto;
     font-weight: 500;
     color: var(--white);
     margin-left: 15px;
+}
+a:link, a:visited{
+    text-decoration: none !important;
+}
+.search_box{
+    display: grid;
+    padding: 0px;
+    height: 100px;
+    justify-content: end;
+    overflow: hidden;
+}
+.search_box input{
+    height: 15px;
+}
+.search_box div{
+    font-size: medium;
+    font-family: 'Signika', sans-serif;
+    color: var(--gray_text);
+    text-align: center;
 }
 .artist-container{
     height: fit-content;
